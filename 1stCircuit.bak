@@ -1,0 +1,112 @@
+EESchema Schematic File Version 4
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:R R1
+U 1 1 5CF71914
+P 3100 2750
+F 0 "R1" H 3170 2796 50  0000 L CNN
+F 1 "1MΩ" H 3170 2705 50  0000 L CNN
+F 2 "Resistor_SMD:R_1806_4516Metric_Pad1.57x1.80mm_HandSolder" V 3030 2750 50  0001 C CNN
+F 3 "~" H 3100 2750 50  0001 C CNN
+	1    3100 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C1
+U 1 1 5CF71D2C
+P 3100 3300
+F 0 "C1" H 3218 3346 50  0000 L CNN
+F 1 "1uF" H 3218 3255 50  0000 L CNN
+F 2 "Capacitor_SMD:CP_Elec_6.3x5.2" H 3138 3150 50  0001 C CNN
+F 3 "~" H 3100 3300 50  0001 C CNN
+	1    3100 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:BC557 Q1
+U 1 1 5CF721F4
+P 3750 3150
+F 0 "Q1" H 3941 3104 50  0000 L CNN
+F 1 "BC557" H 3941 3195 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 3950 3075 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/BC/BC557.pdf" H 3750 3150 50  0001 L CNN
+	1    3750 3150
+	-1   0    0    1   
+$EndComp
+$Comp
+L Transistor_BJT:BC547 Q2
+U 1 1 5CF72DDE
+P 4050 3350
+F 0 "Q2" H 4241 3396 50  0000 L CNN
+F 1 "BC547" H 4241 3305 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 4250 3275 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 4050 3350 50  0001 L CNN
+	1    4050 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D1
+U 1 1 5CF736BD
+P 4150 2750
+F 0 "D1" V 4189 2828 50  0000 L CNN
+F 1 "LED" V 4098 2828 50  0000 L CNN
+F 2 "LED_SMD:LED_1206_3216Metric" H 4150 2750 50  0001 C CNN
+F 3 "~" H 4150 2750 50  0001 C CNN
+	1    4150 2750
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	3100 3550 3100 3450
+Wire Wire Line
+	3100 3550 4150 3550
+Wire Wire Line
+	3100 3150 3100 2950
+Connection ~ 3100 2950
+Wire Wire Line
+	3100 2950 3100 2900
+Wire Wire Line
+	3100 2950 3650 2950
+Wire Wire Line
+	3950 3150 4150 3150
+Wire Wire Line
+	3850 3350 3650 3350
+Wire Wire Line
+	4150 2600 3100 2600
+Wire Wire Line
+	4150 2900 4150 3150
+Connection ~ 4150 3150
+Wire Wire Line
+	3100 3550 2750 3550
+Wire Wire Line
+	2750 3550 2750 3150
+Connection ~ 3100 3550
+Wire Wire Line
+	3100 2600 2750 2600
+Wire Wire Line
+	2750 2600 2750 2850
+Connection ~ 3100 2600
+$Comp
+L Device:Battery_Cell BT1
+U 1 1 5CF7C973
+P 2750 3050
+F 0 "BT1" H 2868 3146 50  0000 L CNN
+F 1 "Battery_Cell 3.3V" H 2868 3055 50  0000 L CNN
+F 2 "Battery:Battery_CR1225" V 2750 3110 50  0001 C CNN
+F 3 "~" V 2750 3110 50  0001 C CNN
+	1    2750 3050
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
